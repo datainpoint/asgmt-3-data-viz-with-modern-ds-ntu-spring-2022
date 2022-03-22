@@ -43,7 +43,7 @@ class TestAssignmentThree(unittest.TestCase):
         players_from_usa_or_not = ex.function_count_players_from_usa_or_not(connection)
         self.assertEqual(players_from_usa_or_not.shape, (2, 2))
         from_usa_or_not = players_from_usa_or_not.iloc[:, 0].values
-        self.assertEqual(np.unique(number_of_players).size, 2)
+        self.assertEqual(np.unique(from_usa_or_not).size, 2)
         number_of_players = players_from_usa_or_not.iloc[:, 1].values
         self.assertEqual(number_of_players.sum(), 502)
     def test_05_count_players_for_each_position(self):
